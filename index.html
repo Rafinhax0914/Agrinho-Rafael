@@ -77,7 +77,30 @@
       <p>How to Face the Fear of Public Speaking? (Brasília Toastmasters)</p>
     </div>
   </div>
+<section class="jogo-section">
+  <h2>Joguin para distrair</h2>
+  <p>Movimente o mouse dentro da área para guiar o bonequinho!</p>
+  <div id="gameArea">
+    <div id="player"></div>
+  </div>
 </section>
+
+<script>
+  const player = document.getElementById('player');
+  const gameArea = document.getElementById('gameArea');
+
+  gameArea.addEventListener('mousemove', (e) => {
+    const rect = gameArea.getBoundingClientRect();
+    const x = e.clientX - rect.left - player.offsetWidth / 2;
+    const y = e.clientY - rect.top - player.offsetHeight / 2;
+
+    const maxX = gameArea.clientWidth - player.offsetWidth;
+    const maxY = gameArea.clientHeight - player.offsetHeight;
+
+    player.style.left = `${Math.max(0, Math.min(x, maxX))}px`;
+    player.style.top = `${Math.max(0, Math.min(y, maxY))}px`;
+  });
+</script>
 
   <footer class="footer">
     <p>Desenvolvido por Rafael Franco © 2024</p>
