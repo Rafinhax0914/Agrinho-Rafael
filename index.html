@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comunicação e Oratória</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
 <body>
+
   <header class="hero">
     <div class="hero-content">
       <h1>Comunicação e Oratória</h1>
@@ -21,17 +22,19 @@
     <h2>Grandes Oradores</h2>
     <div class="biografia-grid">
       <div class="bio-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg" alt="Barack Obama" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg" alt="Barack Obama">
         <h3>Barack Obama</h3>
         <p>Conhecido por sua eloquência, Obama é um mestre em discursos públicos. Sua capacidade de inspirar multidões o tornou um dos maiores oradores do século XXI.</p>
       </div>
+
       <div class="bio-card">
-        <img src="fotos.index/fotos/download (3).jpg" alt="Martin Luther King Jr." />
+        <img src="fotos.index/fotos/download (3).jpg" alt="Martin Luther King Jr.">
         <h3>Martin Luther King Jr.</h3>
         <p>Com seu discurso "I Have a Dream", King marcou gerações com sua voz firme na luta por direitos civis e igualdade racial nos EUA.</p>
       </div>
+
       <div class="bio-card">
-        <img src="fotos.index/fotos/oprAH.jpg" alt="Oprah Winfrey" />
+        <img src="fotos.index/fotos/oprAH.jpg" alt="Oprah Winfrey">
         <h3>Oprah Winfrey</h3>
         <p>Uma das comunicadoras mais influentes do mundo, Oprah usa empatia e autenticidade para se conectar com sua audiência como poucos.</p>
       </div>
@@ -55,52 +58,55 @@
       </div>
     </div>
   </section>
-<section class="videos">
-  <h2 class="section-title">Vídeos Recomendados</h2>
-  <div class="video-grid">
-    <div class="video-card">
-      <a href="https://www.youtube.com/watch?v=wuJqL8v3wZk" target="_blank">
-        <img src="https://img.youtube.com/vi/wuJqL8v3wZk/hqdefault.jpg" alt="The skill that defines your place in the market" />
-      </a>
-      <p>The skill that defines your place in the market (LinkedIn)</p>
+
+  <section class="videos">
+    <h2 class="section-title">Vídeos Recomendados</h2>
+    <div class="video-grid">
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=wuJqL8v3wZk" target="_blank">
+          <img src="https://img.youtube.com/vi/wuJqL8v3wZk/hqdefault.jpg" alt="The skill that defines your place in the market">
+        </a>
+        <p>The skill that defines your place in the market (LinkedIn)</p>
+      </div>
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=TM2Ukz2jCAA" target="_blank">
+          <img src="https://img.youtube.com/vi/TM2Ukz2jCAA/hqdefault.jpg" alt="25 erros mortais da oratória">
+        </a>
+        <p>25 erros mortais da oratória para não cometer em 2025 (em português)</p>
+      </div>
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=bMe2-8GOjcE" target="_blank">
+          <img src="https://img.youtube.com/vi/bMe2-8GOjcE/hqdefault.jpg" alt="How to Face the Fear of Public Speaking?">
+        </a>
+        <p>How to Face the Fear of Public Speaking? (Brasília Toastmasters)</p>
+      </div>
     </div>
-    <div class="video-card">
-      <a href="https://www.youtube.com/watch?v=TM2Ukz2jCAA" target="_blank">
-        <img src="https://img.youtube.com/vi/TM2Ukz2jCAA/hqdefault.jpg" alt="25 erros mortais da oratória" />
-      </a>
-      <p>25 erros mortais da oratória para não cometer em 2025 (em português)</p>
+  </section>
+
+  <section class="jogo-section">
+    <h2>Joguin para distrair</h2>
+    <p>Movimente o mouse dentro da área para guiar o bonequinho!</p>
+    <div id="gameArea">
+      <div id="player"></div>
     </div>
-    <div class="video-card">
-      <a href="https://www.youtube.com/watch?v=bMe2-8GOjcE" target="_blank">
-        <img src="https://img.youtube.com/vi/bMe2-8GOjcE/hqdefault.jpg" alt="How to Face the Fear of Public Speaking?" />
-      </a>
-      <p>How to Face the Fear of Public Speaking? (Brasília Toastmasters)</p>
-    </div>
-  </div>
-<section class="jogo-section">
-  <h2>Joguin para distrair</h2>
-  <p>Movimente o mouse dentro da área para guiar o bonequinho!</p>
-  <div id="gameArea">
-    <div id="player"></div>
-  </div>
-</section>
+  </section>
 
-<script>
-  const player = document.getElementById('player');
-  const gameArea = document.getElementById('gameArea');
+  <script>
+    const player = document.getElementById('player');
+    const gameArea = document.getElementById('gameArea');
 
-  gameArea.addEventListener('mousemove', (e) => {
-    const rect = gameArea.getBoundingClientRect();
-    const x = e.clientX - rect.left - player.offsetWidth / 2;
-    const y = e.clientY - rect.top - player.offsetHeight / 2;
+    gameArea.addEventListener('mousemove', (e) => {
+      const rect = gameArea.getBoundingClientRect();
+      let x = e.clientX - rect.left - player.offsetWidth / 2;
+      let y = e.clientY - rect.top - player.offsetHeight / 2;
 
-    const maxX = gameArea.clientWidth - player.offsetWidth;
-    const maxY = gameArea.clientHeight - player.offsetHeight;
+      const maxX = gameArea.clientWidth - player.offsetWidth;
+      const maxY = gameArea.clientHeight - player.offsetHeight;
 
-    player.style.left = `${Math.max(0, Math.min(x, maxX))}px`;
-    player.style.top = `${Math.max(0, Math.min(y, maxY))}px`;
-  });
-</script>
+      player.style.left = `${Math.max(0, Math.min(x, maxX))}px`;
+      player.style.top = `${Math.max(0, Math.min(y, maxY))}px`;
+    });
+  </script>
 
   <footer class="footer">
     <p>Desenvolvido por Rafael Franco © 2024</p>
@@ -108,5 +114,7 @@
       <i class="bi bi-github"></i> GitHub
     </a>
   </footer>
+
 </body>
 </html>
+
