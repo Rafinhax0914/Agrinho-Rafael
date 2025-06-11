@@ -1,60 +1,98 @@
-* {
+body {
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: #fff;
+  color: #333;
   line-height: 1.6;
 }
 
-.hero {
-  background: linear-gradient(to right, #1e1e1e, #2d2d2d);
-  padding: 60px 20px;
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-area {
+  background-color: #1e392b;
+  color: #fff;
+  padding: 30px;
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  color: #ffffff;
+.title-area h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.title-area p {
+  font-size: 1.2em;
+}
+
+.hero {
+  background: url('url_to_your_hero_image.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 80px 0;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #cccccc;
+  font-size: 1.2em;
+  width: 70%;
+  margin: auto;
 }
 
 .biografias {
-  padding: 50px 20px;
+  padding: 50px 0;
   text-align: center;
 }
 
 .biografias h2 {
-  font-size: 2rem;
+  font-size: 2.5em;
   margin-bottom: 30px;
-  color: #ffffff;
+  color: #1e392b;
 }
 
 .biografia-grid {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .bio-card {
-  background-color: #1e1e1e;
-  border-radius: 12px;
+  background-color: #fff;
   padding: 20px;
-  max-width: 300px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .bio-card img {
@@ -63,114 +101,153 @@ body {
   margin-bottom: 15px;
 }
 
+.bio-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #1e392b;
+}
+
+.bio-card p {
+  font-size: 1em;
+}
+
 .topicos {
-  padding: 50px 20px;
-  background-color: #1e1e1e;
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 2rem;
+  font-size: 2.5em;
   margin-bottom: 30px;
-  color: #ffffff;
+  color: #1e392b;
 }
 
 .topico-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  padding: 0 20px;
 }
 
 .topico-card {
-  background-color: #2a2a2a;
+  background-color: #fff;
   padding: 20px;
-  border-radius: 12px;
-  width: 300px;
-  color: #e0e0e0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .topico-card h3 {
+  font-size: 1.5em;
   margin-bottom: 10px;
+  color: #1e392b;
+}
+
+.topico-card p {
+  font-size: 1em;
 }
 
 .videos {
-  background-color: #121212;
-  padding: 50px 20px;
-  max-width: 960px;
-  margin: 40px auto;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #ffffff44;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .video-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  padding: 0 20px;
 }
 
 .video-card {
-  background-color: #1e1e1e;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 320px;
-  text-align: center;
-  box-shadow: 0 0 10px #ffffff55;
-  transition: transform 0.3s ease;
-}
-
-.video-card:hover {
-  transform: scale(1.05);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .video-card img {
   width: 100%;
-  display: block;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .video-card p {
-  padding: 10px;
-  color: #ccc;
-  font-size: 0.9rem;
-}
-
-.footer {
-  background-color: #111;
-  padding: 20px;
-  text-align: center;
-  color: #aaa;
-}
-
-.footer a {
-  color: #ffffff;
-  text-decoration: none;
+  font-size: 1em;
 }
 
 .jogo-section {
-  padding: 50px 20px;
-  background-color: #1a1a1a;
+  padding: 50px 0;
   text-align: center;
-  color: #ffffff;
+  background-color: #f0f0f0;
 }
 
 #gameArea {
-  margin: 20px auto;
   width: 300px;
-  height: 300px;
-  background-color: #ffffff;
-  border: 2px dashed #000000;
+  height: 200px;
+  background-color: #ddd;
+  margin: 20px auto;
   position: relative;
+  border-radius: 8px;
 }
 
 #player {
   width: 30px;
   height: 30px;
-  background-color: #727272;
+  background-color: blue;
   border-radius: 50%;
   position: absolute;
-  top: 135px;
-  left: 135px;
-  transition: top 0.05s, left 0.05s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.footer {
+  background-color: #1e392b;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    width: 90%;
+  }
+
+  .biografia-grid,
+  .topico-grid,
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.country-element {
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  color: #1e392b;
+}
+
+.city-element {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
